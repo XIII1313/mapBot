@@ -25,7 +25,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     print("recieved message")
-    if message.content == "map":
+    if message.content.lower() == "map":
         mapName = chooseRandomObjectFromList(replyList)
         await client.send_message(message.channel, mapName)
         
