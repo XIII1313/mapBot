@@ -14,6 +14,9 @@ def chooseRandomObjectFromList(list):
     return randomObject
 
 
+print("starting...")
+
+
 @client.event
 async def on_ready():
     print("Bot is online and connected to Discord")
@@ -21,6 +24,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    print("recieved message")
     if message.content == "map":
         mapName = chooseRandomObjectFromList(replyList)
         await client.send_message(message.channel, mapName)
