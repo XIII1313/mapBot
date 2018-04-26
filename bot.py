@@ -32,6 +32,10 @@ async def on_message(message):
     elif message.content.lower() in ["hey", "hello", "hi"]:
         reply = chooseRandomObjectFromList(replyListHey)
         await client.send_message(message.channel, reply)
+        
+    elif message.content.lower() in ["good bot", "good bot!"]:
+        reply = "Thanks"
+        await client.send_message(message.channel, reply)
 
 
 client.run("NDM2NTU5MDQwMDcyNTE1NTg0.DbpUrA.Ka1eRWTagJtIMjD6NY2GQ6pgKK8")
