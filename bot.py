@@ -37,5 +37,9 @@ async def on_message(message):
         reply = "Thanks"
         await client.send_message(message.channel, reply)
 
+        
+    elif message.content.lower() in ["bad bot", "bad bot!"]:
+        reply = "Bad human."
+        await client.send_message(message.channel, reply)
 
 client.run("NDM2NTU5MDQwMDcyNTE1NTg0.DbpUrA.Ka1eRWTagJtIMjD6NY2GQ6pgKK8")
