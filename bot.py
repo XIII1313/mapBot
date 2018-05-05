@@ -9,6 +9,7 @@ def main():
         print("start")
         print(var_one)
         print("succeeded")
+        time.sleep(20)
         main()
         
     except:
